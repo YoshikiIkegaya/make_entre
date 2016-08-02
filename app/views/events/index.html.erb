@@ -93,7 +93,7 @@
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>
                 <%= event.date %><br></p>
-              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %> 
+                <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary white", method: :post, data: {confirm: "本当に参加しますか？"} %>
               <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
             </div>
           </div>
@@ -105,7 +105,7 @@
     <!-- /.row -->
 
     <!-- Testimonials section -->
-    <section id="testimonials" class="testimonials no-padding">
+    <!--<section id="testimonials" class="testimonials no-padding">
       <div class="container-fluid">
         <div class="row no-gutter">
           <div class="flexslider">
@@ -114,7 +114,7 @@
                 <div class="col-md-12">
                   <blockquote>
                     <h1>今月のMVP賞 </h1>
-                    <div class="tin cleatfix"><img src="images/test.jpg"></div>
+                    <div class="tinß cleatfix"><img src="images/test.jpg"></div>
                     <p>魚沼産コシヒカリ, パンツで賞</p>
                   </blockquote>
                 </div>
@@ -123,7 +123,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Testimonials section -->
 
     <!-- Footer section -->
@@ -156,12 +156,14 @@
             </div>
             <div class="footer-col col-md-3">
               <h5>SNS</h5>
+              <div class =btns>
               <ul class="footer-share">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
               </ul>
+            </div>
             </div>
           </div>
         </div>

@@ -92,6 +92,29 @@
         -webkit-align-items: center;
         align-items: center;
     }
+  .btns a{
+    color: #848484 ;
+    size:21px;
+    padding:0px 10px
+  }
+
+ a.white:link{
+    color: white;
+    text-decoration : underline;
+}
+a.white:visited{
+    color: white;
+    text-decoration : underline;
+}
+a.white:hover{
+    color: white;
+    text-decoration : underline;
+}
+a.white:active{
+    color: white;
+    text-decoration : underline;
+}
+
 
 }
 
