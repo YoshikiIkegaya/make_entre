@@ -53,9 +53,10 @@
           <h1>今月のイベント一覧</h1>
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag "syaberi_ba.jpg" %></a></div>
-              <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag "test.jpg" %></a></div>
-              <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag "test.jpg" %></a></div>
+              <% @events.each.with_index do |event,i| %>
+                <div class="swiper-slide col-md-12 photo"><a href="#"><%= image_tag event.main_image %></a></div>
+                <% break if i == 3 %>
+              <% end %>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -83,8 +84,8 @@
     <!-- events text -->
     <!-- Page Features -->
     <div class="row text-center">
-
       <% @events.each do |event| %>
+        <% @reserve_token = 0 %>
 
         <div class="col-md-3 col-sm-6 hero-feature">
           <div class="thumbnail">
@@ -93,8 +94,20 @@
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>
                 <%= event.date %><br></p>
-              <p><%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %> 
-              <%= link_to '詳細', event, class: "btn btn-default" %></a></p>
+              <p>
+                <% @users = event.participating_users
+                   @users.each do |reserved_user|
+                     if reserved_user.id == current_user.id
+                       @reserve_token += 1
+                     end
+                   end %>
+                    <% if @reserve_token > 0 %>
+                      <span class="btn btn-default">申請済み</span>
+                    <% else %>
+                      <%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %>
+                    <% end %>
+                <%= link_to '詳細', event, class: "btn btn-default" %>
+              </p>
             </div>
           </div>
         </div>
