@@ -43,6 +43,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 gem 'bootstrap-sass'
 
+# 管理画面に画像保存機能を追加
+gem 'carrierwave'
+  
+gem 'paperclip'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -54,9 +59,5 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  # 管理画面に画像保存機能を追加
-  gem 'carrierwave'
-  
-  gem 'paperclip'
 
 end
