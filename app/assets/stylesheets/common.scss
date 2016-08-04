@@ -68,7 +68,6 @@
 /* フッター ================================ */
 footer {
   margin-top: 100px;
-  padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #848484;
 }
@@ -142,7 +141,7 @@ footer small {
   background-color: #28b086;
 }
 
-/*　「新規登録」と「編集」ボタン　*/
+/* 「新規登録」と「編集」ボタン */
 .register-btn, .edit-btn {
   background-color: #239b76;
   margin-top:30px;
@@ -154,7 +153,7 @@ footer small {
   text-decoration: none;
 }
 
-/*　「戻る」ボタン　*/
+/* 「戻る」ボタン */
 .destroy-btn {
   background-color: #1f89e2;
 }
@@ -173,7 +172,7 @@ input, textarea, select {
   border-radius: 3px;
 }
 
-/*　エラーメッセージ　*/
+/* エラーメッセージ */
 .alerts {
   padding-top: 80px;
   padding-bottom: 20px;
@@ -202,3 +201,11 @@ input, textarea, select {
 .alert-danger ul li {
   list-style-type: disc;
  }
+
+/* Yusuke*/
+
+.btns li{
+  float: left;
+  color:#6c7279;
+  list-style:none;
+}
