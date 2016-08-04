@@ -65,7 +65,7 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1><%= @event.date %>　<%= @event.name %></h1>
+                <h1><%= @event.date %><%= @event.name %></h1>
 
                 <!-- Author -->
                 <p class="lead">
@@ -168,17 +168,19 @@
                 <div class="well">
                     <h4>参加者一覧</h4>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6" id="participant">
                             <% @users.each do |user| %>
                                 <% if user.image %>
-                                  <%= image_tag "/user_images/#{user.image}", class: "profile_img" %>
+                                <span><%= image_tag "/user_images/#{user.image}", class: "profile_img" %></span>
+                                  <p class="arrow_box"><%= user.name %></p>
+                                  <div>
+
                                 <% else %>
                                   <%= image_tag "wanko.png", class: "profile_img" %>
                                 <% end %>
                             <% end %>
                         </div>
                         <div class="col-lg-6">
-                            
                         </div>
                     </div>
                     <!-- /.row -->
