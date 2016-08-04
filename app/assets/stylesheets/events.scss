@@ -97,8 +97,23 @@
     color:#6c7279;
     padding: 0px 10px;
     font-size:20px;
-}
-
+    }
+    .btn-primary:link {
+    text-decoration : underline;
+    color : #ffffff;
+    }
+   .btn-primary:visited {
+    text-decoration : underline;
+    color : #ffffff;
+    }
+    .btn-primary:active {
+    text-decoration : underline;
+    color : #ffffff;
+    }
+    .btn-primary:hover {
+    text-decoration : underline;
+    color : #ffffff;
+    }
 
 }
 
@@ -106,6 +121,8 @@
 	width:600px;
 	height:300px;
 }
+
+/* Yusuke */
 
  #participant div {
   position: relative;
