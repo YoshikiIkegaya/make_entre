@@ -174,9 +174,9 @@
                                 <span><%= image_tag "/user_images/#{user.image}", class: "profile_img" %></span>
                                   <p class="arrow_box"><%= user.name %></p>
                                   <div>
-
                                 <% else %>
-                                  <%= image_tag "wanko.png", class: "profile_img" %>
+                               <span><%= image_tag "wanko.png", class: "profile_img" %></span>
+                                <p class="arrow_box"><%= user.name %></p>
                                 <% end %>
                             <% end %>
                         </div>
