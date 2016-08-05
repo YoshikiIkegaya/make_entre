@@ -12,6 +12,5 @@ ActiveAdmin.register Event do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-	permit_params :name, :place, :date, :content
-	permit_params :name, :main_image, :main_image_cache, :publish_datetime, :place, :date, :content
+	permit_params :name, :main_image, :main_image_cache, :publish_datetime, :place, :date, :content, :category, :organizer, :organizer_url
 end
