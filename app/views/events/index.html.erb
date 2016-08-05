@@ -96,16 +96,14 @@
                 <%= event.date %><br></p>
               <p>
                 <% @users = event.participating_users
-                   @users.each do |reserved_user|
-                     if reserved_user.id == current_user.id
-                       @reserve_token += 1
-                     end
+                   if reserved?(@users)
+                      @reserve_token += 1
                    end %>
-                    <% if @reserve_token > 0 %>
-                      <span class="btn btn-default">申請済み</span>
-                    <% else %>
-                      <%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %>
-                    <% end %>
+                <% if @reserve_token > 0 %>
+                  <span class="btn btn-default">申請済み</span>
+                <% else %>
+                  <%= link_to '行く！', participate_path(event.id), class: "btn btn-primary", method: :post, data: {confirm: "本当に参加しますか？"} %>
+                <% end %>
                 <%= link_to '詳細', event, class: "btn btn-default" %>
               </p>
             </div>
