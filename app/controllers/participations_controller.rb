@@ -4,7 +4,8 @@ class ParticipationsController < ApplicationController
 		event = Event.find(params[:event_id])
 		participation = current_user.participations.build(event_id: event.id)
 		participation.save
-		redirect_to event
+		ParticipateMailer.participate_email(current_user, event).deliver
+		redirect_to event, notice: "参加申請が完了しました。メールをご確認ください。"
 	end
 
 	def cancel
@@ -12,6 +13,6 @@ class ParticipationsController < ApplicationController
 		#なぜかcurrent_user.participations.build(event_id: event.id)がうまくいかない...原因究明したい
 		participation = Participation.find_by(event_id: event.id, user_id: current_user.id)
 		participation.destroy
-		redirect_to event
+		redirect_to event, notice: "参加をキャンセルしました。"
 	end
 end

@@ -69,7 +69,7 @@
 
                 <!-- Author -->
                 <p class="lead">
-                    by 主催者：<%= link_to @event.organizer, @event.organizer_url %>
+                    by 主催者：<% if @event.organizer %><%= link_to @event.organizer, @event.organizer_url %><% end %>
                 </p>
 
                 <hr>
