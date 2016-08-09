@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :events
     
-  devise_for :users
+  devise_for :users, :controllers => {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+  }
     
   devise_scope :admin_user do
       get '/admin_users/sign_out' => 'devise/sessions#destroy'
