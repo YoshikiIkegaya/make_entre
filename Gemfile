@@ -47,6 +47,14 @@ gem 'bootstrap-sass'
 gem 'carrierwave'
   
 gem 'paperclip'
+# facebook認証追加
+gem 'omniauth'
+
+gem 'omniauth-facebook'
+
+gem 'omniauth-twitter'
+
+gem 'certified'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
