@@ -1,31 +1,3 @@
-<!--
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
-
-<p>
-  <strong>Place:</strong>
-  <%= @event.place %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @event.content %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
-
---!>
-
 <html lang="ja">
 
 <head>
@@ -69,7 +41,7 @@
 
                 <!-- Author -->
                 <p class="lead">
-                    by 主催者：<% if @event.organizer %><%= link_to @event.organizer, @event.organizer_url %><% end %>
+                    by 主催者：<%= link_to @event.organizer, @event.organizer_url if @event.organizer %>
                 </p>
 
                 <hr>
@@ -170,18 +142,15 @@
                         <div class="col-lg-6" id="participant">
                             <% @users.each do |user| %>
                                 <% if user.image %>
-                                <span><%= image_tag "/user_images/#{user.image}", class: "profile_img" %></span>
-                                  <p class="arrow_box"><%= user.name %></p>
-                                  <div>
+                                    <span><%= image_tag "/user_images/#{user.image}", class: "profile_img" %></span>
+                                    <p class="arrow_box"><%= user.name %></p>
                                 <% else %>
-                               <span><%= image_tag "wanko.png", class: "profile_img" %></span>
-                                <p class="arrow_box"><%= user.name %></p>
+                                    <span><%= image_tag "wanko.png", class: "profile_img" %></span>
+                                    <p class="arrow_box"><%= user.name %></p>
                                 <% end %>
                             <% end %>
                         </div>
-                        <% if reserved?(@users) %>
-                            <%= link_to "参加をキャンセルする", cancel_path(@event.id), method: :delete, data: {confirm: "本当にキャンセルしますか？"} %>
-                        <% end %>
+                        <%= link_to "参加をキャンセルする", cancel_path(@event.id), method: :delete, data: {confirm: "本当にキャンセルしますか？"} if reserved?(@users) %>
                         <div class="col-lg-6">
                         </div>
                     </div>
