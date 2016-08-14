@@ -1,0 +1,169 @@
+/* line 5, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events {
+  /*member------------*/
+  /* ------------------------------------------------------------------------------
+  	 Testimonials
+  -------------------------------------------------------------------------------*/
+}
+/* line 6, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .events-show {
+  width: 100%;
+  padding: 50px 0 50px 0;
+  /*background-image:url(images/back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;*/
+}
+/* line 14, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .photo {
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 19, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events img {
+  width: 800px;
+  margin: 0 auto;
+}
+/* line 27, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .hero-spacer {
+  margin-top: 50px;
+}
+/* line 31, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .hero-feature {
+  margin-bottom: 30px;
+}
+/* line 39, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .testimonials {
+  background-color: #e84545;
+  position: relative;
+  text-align: center;
+}
+/* line 44, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .testimonials blockquote {
+  border: 0;
+  margin: 0;
+  padding: 100px 15%;
+}
+/* line 49, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .testimonials h1 {
+  color: #fff;
+  font: 23px "Source Sans Pro";
+  font-weight: 300;
+}
+/* line 54, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .testimonials p {
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+/* line 65, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .tin {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+/* line 72, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+/* line 76, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 96, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events a, .events a:link, .events a:visited {
+  color: #6c7279;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+/* line 101, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .btn-primary:link {
+  text-decoration: underline;
+  color: #ffffff;
+}
+/* line 105, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .btn-primary:visited {
+  text-decoration: underline;
+  color: #ffffff;
+}
+/* line 109, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .btn-primary:active {
+  text-decoration: underline;
+  color: #ffffff;
+}
+/* line 113, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.events .btn-primary:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* line 120, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.show_main_img {
+  width: 600px;
+  height: 300px;
+}
+
+/* Yusuke */
+/* line 127, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+#participant div {
+  position: relative;
+}
+
+/* line 131, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+#participant span {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* line 136, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.arrow_box {
+  display: none;
+  position: absolute;
+  padding: 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+}
+
+/* line 147, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+/* line 162, C:/Users/yoshiki/makeEntre/app/assets/stylesheets/events.scss */
+span:hover + p.arrow_box {
+  display: block;
+}
