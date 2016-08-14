@@ -4,36 +4,85 @@
     <div class="container">
       <div class="col-md-10 col-md-offset-1">
         <div class="banner-text text-center">
-          <h1>しゃべり場</h1>
-          <p>"遊び＝学び＝楽しい"を実現する世の中を<br>
+          <h1>Make Entre</h1>
+          <p>社会と学生の壁を壊し、自身で主体的な人生を掴み取れ！<br>
            </p>
           <nav role="navigation">
             <a href="#services" class="banner-btn">
               <img src="images/down-arrow.png" alt="">
             </a>
           </nav>
-        </div>
-        <!-- banner text -->
+        </div>  
       </div>
     </div>
   </section>
+     <!-- banner text -->
 
-  <!-- 協賛 section -->
-  <section id="contact" class="section_quote">
+     <!-- 協賛 section -->
+ <section id="contact" class="">
     <div class="container">
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <h2>ご協賛企業様</h1>
-         <img src="http://placehold.it/200x200" alt="">
+         <h2 class="text-center" style="margin-top:30px;">協賛section</h2>
+      <p></p>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 services ">  
+         <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <div class="services-content">
+            <h5 class="text-center">サブタイトル</h5>
+            <p class="text-center">
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 services"> 
+          <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <div class="services-content">
+            <h5 class="text-center">サブタイトル</h5>
+            <p class="text-center">
+            </p>
+          </div>
+        </div>
+         <div class="col-md-4 col-sm-6 services"> 
+           <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <div class="services-content">
+            <h5 class="text-center">サブタイトル</h5>
+            <p class="text-center">
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <!-- 協賛 section -->
+  
   <!-- step section -->
   <section id="contact" class="">
     <div class="container">
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <h2>しゃべり場の狙い</h2>
-        <%= image_tag('aim.png', { :border => '0', :alt => 'coming soon'}) %>
+         <h2 class="text-center">アントレまでの成長ステップ図</h2>
+      <p></p>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 services"> 
+          <%= image_tag('step1.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <div class="services-content">
+            <h5 class="text-center">しゃべり場</h5>
+            <p class="text-center">
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 services"> 
+          <%= image_tag('step2.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <div class="services-content">
+            <h5 class="text-center">まなび場</h5>
+            <p class="text-center">
+            </p>
+          </div>
+        </div>
+         <div class="col-md-4 col-sm-6 services"> 
+          <%= image_tag('step3.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <div class="services-content">
+            <h5 class="text-center">つくり場</h5>
+            <p class="text-center">説明文
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -41,6 +90,7 @@
 
 
   <!-- services section -->
+  <!--
   <section id="services" class="services service-section">
     <div class="container">
       <h2 class="text-center">強み</h2>
@@ -89,6 +139,7 @@
       </div>
     </div>
   </section>
+  -->
   <!-- services section -->
 
   <!-- our team section -->
@@ -96,16 +147,17 @@
   <section id="teams" class="section teams">
     <div class="container">
       <div class="row">
-       <p class="voice">ユーザーの声</p>
+       <h2 class="voice">ユーザーの声</h2>
         <!-- team member 1 -->
         <div class="col-md-4 col-sm-8">
           <div class="person">
-            <%= image_tag('sya.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+           <div class="text-center">
+            <%= image_tag('person1.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+            </div>
             <div class="person-content">
               <h4>渡辺  湧祐くん</h4>
               <h5 class="role">明治大学 4年生</h5>
-              <p>アントレに参加したことで、課金だけでなく真面目なことに
-            楽しさを見いだせました。</p>
+              <p>アントレに入って、動画制作やプレゼンを学び、活動の幅が広がりました!</p>
             </div>
             <ul class="social-icons clearfix">
               <li><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -120,7 +172,7 @@
         <!-- team member 2 -->
         <div class="col-md-4 col-sm-8">
           <div class="person">
-            <%= image_tag('syun.jpg', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+            <%= image_tag('person2.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
             <div class="person-content">
               <h4>中村  駿之介くん</h4>
               <h5 class="role">明治大学 4年</h5>
@@ -160,6 +212,8 @@
       </div>
     </div>
   </section>
+  </div>
+  
   <!-- our team section -->
 
   <!-- Testimonials section
@@ -212,18 +266,12 @@
     <div class="container">
       <div class="col-md-8 col-md-offset-2 text-center">
         <h3>しゃべり場で楽しい大学生活を過ごしましょう！！</h3>
-        <a href="form.html" class="btn btn-large" style="text-decoration:none;">しゃべり場にいく</a> </div>
+        <a href="http://makeentre.jp" class="btn btn-large" style="text-decoration:none;">しゃべり場にいく</a>
+      </div>
     </div>
   </section>
-  <!-- Get a quote section -->
-  <!-- Get a quote section -->
-  <section id="contact" class="section quote">
-    <div class="container">
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <h2>しゃべり場ブログもみてね</h2>
-        <a href="form.html" class="btn btn-large" style="text-decoration:none;">ブログを読む</a> </div>
-    </div>
-  </section>
+  
+  
   </div>
   <!-- Get a quote section -->
   <!-- Footer section -->
