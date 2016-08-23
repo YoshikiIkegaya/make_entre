@@ -67,7 +67,6 @@
 
 /* フッター ================================ */
 footer {
-  margin-top: 100px;
   border-top: 1px solid #eaeaea;
   color: #848484;
   clear: left;
@@ -123,6 +122,28 @@ footer-small {
     color: #e84545;
     font-size: 11px;
     margin: 0 2px;
+  }
+  /* 後で整理。 */
+  a, a:link, a:visited {
+    color:#6c7279;
+    padding: 0px 10px;
+    font-size:20px;
+  }
+  .btn-primary:link {
+    text-decoration : underline;
+    color : #ffffff;
+  }
+  .btn-primary:visited {
+    text-decoration : underline;
+    color : #ffffff;
+  }
+  .btn-primary:active {
+    text-decoration : underline;
+    color : #ffffff;
+  }
+  .btn-primary:hover {
+    text-decoration : underline;
+    color : #ffffff;
   }
 }
 
