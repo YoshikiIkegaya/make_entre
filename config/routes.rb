@@ -14,20 +14,8 @@ Rails.application.routes.draw do
       get '/admin_users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :users, only: [:index, :show, :edit, :update] do
-    member do
-      get :like_notes
-    end
-  end
+  resources :users, only: [:index, :show, :edit, :update]
 
-  resources :notes, only: [:show, :create, :edit, :update, :destroy] do
-    member do
-      get :liking_users
-    end
-  end
-
-  post '/like/:note_id' => 'likes#like', as: 'like'
-  delete '/unlike/:note_id' => 'likes#unlike', as: 'unlike'
 
   post '/participation/:event_id' => 'participations#participate', as: 'participate'
   delete '/cancel/:event_id' => 'participations#cancel', as: 'cancel'

@@ -3,9 +3,6 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :validatable, :confirmable, :omniauthable
-  has_many :notes
-  has_many :likes
-  has_many :like_notes, through: :likes, source: :note
   has_many :participations
   has_many :participate_events, through: :participations, source: :event
 
