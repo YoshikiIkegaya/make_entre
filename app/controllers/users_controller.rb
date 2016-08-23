@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :correct_user, only: [:edit, :update]
-  before_action :set_user, only: [:show, :edit, :update, :like_notes]
+  before_action :set_user, only: [:show, :edit, :update]
   
 
   def show
-    @notes = @user.notes
-    @title = "投稿一覧"
+    @title = "参加するイベント一覧"
     @events = @user.participate_events
   end
 
@@ -22,12 +21,6 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def like_notes
-    @notes = @user.like_notes
-    @title = "いいね！一覧"
-    render :show
   end
 
   private

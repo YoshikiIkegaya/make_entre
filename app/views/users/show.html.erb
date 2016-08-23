@@ -16,8 +16,6 @@
     <h3 class="user-info"><%= @user.email %></h3>
   </section>
 
-  <%= link_to @user.likes.count, like_notes_user_path(@user.id) %>個の投稿にいいね！しています
-
   <% if current_user?(@user) %>
     <section>
       <small><%= link_to 'プロフィールを編集', edit_user_path(@user) %></small>
@@ -28,11 +26,6 @@
 
 <ul class="notes">
   <h2><%= @title %></h2>
-  <%= render @notes %>
-</ul>
-
-<ul class="notes">
-  <h2>参加するイベント一覧</h2>
   <% @events.each do |event| %>
     <%= event.name %>
   <% end %>
