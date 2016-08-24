@@ -7,51 +7,55 @@
           <h1>Make Entre</h1>
           <p>社会と学生の壁を壊し、自身で主体的な人生を掴み取れ！<br>
            </p>
-          <nav role="navigation">
-            <a href="#services" class="banner-btn">
-              <img src="images/down-arrow.png" alt="">
-            </a>
-          </nav>
         </div>  
       </div>
     </div>
   </section>
      <!-- banner text -->
-
-     <!-- 協賛 section -->
- <section id="contact" class="">
+       <section class="banner2" role="banner">
+    <!-- banner text -->
     <div class="container">
-         <h2 class="text-center" style="margin-top:30px;">協賛section</h2>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="banner-text2 text-center">
+               <h2>共に楽しく学べる仲間がいるか？</h2>
+        </div>  
+      </div>
+    </div>
+  </section>
+     
+  
+    <!-- step section -->
+  <section id="contact" class="">
+    <div class="container">
+         <h2 style="margin-top:20px;" class="text-center">協賛企業様</h2>
       <p></p>
       <div class="row">
-        <div class="col-md-4 col-sm-6 services ">  
-         <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+        <div class="col-md-4 col-sm-6 services"> 
+          <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
           <div class="services-content">
-            <h5 class="text-center">サブタイトル</h5>
+            <h5 class="text-center">株式会社make act様</h5>
             <p class="text-center">
             </p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 services"> 
-          <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <%= image_tag('comming_soon.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
           <div class="services-content">
-            <h5 class="text-center">サブタイトル</h5>
+            <h5 class="text-center">comming soon...</h5>
             <p class="text-center">
             </p>
           </div>
         </div>
          <div class="col-md-4 col-sm-6 services"> 
-           <%= image_tag('makeact_logo.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
+          <%= image_tag('comming_soon.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
           <div class="services-content">
-            <h5 class="text-center">サブタイトル</h5>
-            <p class="text-center">
-            </p>
+            <h5 class="text-center">comming soon...</h5>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- 協賛 section -->
+  <!-- step section -->
   
   <!-- step section -->
   <section id="contact" class="">
@@ -143,11 +147,11 @@
   <!-- services section -->
 
   <!-- our team section -->
-  <div class="voices">
-  <section id="teams" class="section teams">
+  <div class="voice">
+  <section id="teams" class="teams">
     <div class="container">
       <div class="row">
-       <h2 class="voice">ユーザーの声</h2>
+       <h2 class="text-center">ユーザーの声</h2>
         <!-- team member 1 -->
         <div class="col-md-4 col-sm-8">
           <div class="person">
@@ -155,9 +159,9 @@
             <%= image_tag('person1.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
             </div>
             <div class="person-content">
-              <h4>渡辺  湧祐くん</h4>
-              <h5 class="role">明治大学 4年生</h5>
-              <p>アントレに入って、動画制作やプレゼンを学び、活動の幅が広がりました!</p>
+              <h4>森谷　繁喜くん</h4>
+              <h5 class="role">日本大学 1年生</h5>
+              <p>アントレに入って、一歩踏み出すことに不安を感じなくなりました！</p>
             </div>
             <ul class="social-icons clearfix">
               <li><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -174,10 +178,9 @@
           <div class="person">
             <%= image_tag('person2.png', { :border => '0', :alt => 'coming soon',:class=> "img-responsive"})%>
             <div class="person-content">
-              <h4>中村  駿之介くん</h4>
-              <h5 class="role">明治大学 4年</h5>
-              <p>自分のやりたいことが見つかりました。今後は妥協せず、人生を
-            突き進もうと思います。</p>
+              <h4>石川　亮くん</h4>
+              <h5 class="role">東京福祉大学 2年</h5>
+              <p>意見を認め合うことで自分の意見を発言することに抵抗がなくなりました。</p>
             </div>
             <ul class="social-icons clearfix">
               <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
@@ -262,10 +265,10 @@
    Testimonials section -->
 
   <!-- Get a quote section -->
-  <section id="contact" class="section quote">
+  <section id="contact" class="quote">
     <div class="container">
       <div class="col-md-8 col-md-offset-2 text-center">
-        <h3>しゃべり場で楽しい大学生活を過ごしましょう！！</h3>
+        <h3 style="margin-top:100px;">しゃべり場で楽しい大学生活を過ごしましょう！！</h3>
         <a href="http://makeentre.jp" class="btn btn-large" style="text-decoration:none;">しゃべり場にいく</a>
       </div>
     </div>
@@ -289,13 +292,6 @@
           <div class="footer-col col-md-3">
             <h5>開催日時</h5>
             <p>
-            <!--<ul>
-              <li><a href="#">Digital Strategy</a></li>
-              <li><a href="#">Websites</a></li>
-              <li><a href="#">Videography</a></li>
-              <li><a href="#">Social Media</a></li>
-              <li><a href="#">User Experience</a></li>
-            </ul>-->
             日時：毎週月曜日 20-22時<br>
             アクセス：<br>
             白金高輪駅２番出口より徒歩2分
@@ -303,9 +299,9 @@
             </p>
           </div>
           <div class="footer-col col-md-3">
-            <h5>SNS</h5>
+            <h5 class="footer-big">SNS</h5>
             <div class="btns">
-            <ul class="footer-share">
+            <ul class="footer-big">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
