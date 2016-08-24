@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "ikegaya.dev@gmail.com"
+  default from: "info@makeentre.jp"
   layout 'mailer'
 end
