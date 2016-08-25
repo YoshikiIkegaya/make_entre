@@ -11,13 +11,13 @@ class User < ActiveRecord::Base
   # deviseのvalidatableによって以下と同じバリデーションが設定されているのでコメントアウトしています
   # validates :email, presence: true, uniqueness: true
 
-  def set_image(file)
-    if !file.nil?
-      file_name = file.original_filename
-      File.open("public/user_images/#{file_name}", 'wb'){|f| f.write(file.read)}
-      self.image = file_name
-    end
-  end
+  #def set_image(file)
+  #  if !file.nil?
+  #   file_name = file.original_filename
+  #    File.open("public/user_images/#{file_name}", 'wb'){|f| f.write(file.read)}
+  #    self.image = file_name
+  #  end
+  #end
 
   def self.find_for_oauth(auth)
     user = User.where('email = ?', auth.info.email).first
