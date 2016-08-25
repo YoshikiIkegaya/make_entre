@@ -42,7 +42,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'bootstrap-sass'
 
 # 管理画面に画像保存機能を追加
-gem 'carrierwave'
+gem 'carrierwave',github: 'carrierwaveuploader/carrierwave'
   
 gem 'paperclip'
 # facebook認証追加

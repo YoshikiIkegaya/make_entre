@@ -17,6 +17,15 @@ GIT
       sass-rails
       sprockets (< 4.1)
 
+GIT
+  remote: git://github.com/carrierwaveuploader/carrierwave.git
+  revision: 8ceadb7fca5068564cfa8a33b1a76af86c6cbff3
+  specs:
+    carrierwave (0.11.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,12 +88,6 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (9.0.5)
-    carrierwave (0.11.2)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
-      mimemagic (>= 0.3.0)
     certified (1.0.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -422,7 +425,7 @@ DEPENDENCIES
   aws-sdk (~> 2.3)
   bootstrap-sass
   byebug
-  carrierwave
+  carrierwave!
   certified
   coffee-rails (~> 4.1.0)
   devise (= 3.5.1)
