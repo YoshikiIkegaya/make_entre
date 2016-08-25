@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :validatable, :confirmable, :omniauthable
   has_many :participations
   has_many :participate_events, through: :participations, source: :event
+  mount_uploader :image, ImageUploader
 
   validates :name, presence: true
   # deviseのvalidatableによって以下と同じバリデーションが設定されているのでコメントアウトしています

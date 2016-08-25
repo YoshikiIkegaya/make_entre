@@ -2,7 +2,7 @@
   <section>
     <span class="label">プロフィール画像</span>
     <h3 class="user-info">
-      <%= image_for(@user) %>
+      <%= image_tag @user.image.url %>
     </h3>
   </section>
 
