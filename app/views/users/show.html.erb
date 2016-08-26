@@ -3,7 +3,7 @@
     <section>
       <span class="label">プロフィール画像</span>
       <h3 class="user-info">
-      <% if @user.image %>
+      <% if @user.image.url %>
         <%= image_tag @user.image.url, class: "profile_img" %>
       <% else %>
         <%= image_tag "wanko.png", class: "profile_img" %>
