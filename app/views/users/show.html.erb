@@ -1,46 +1,46 @@
 <div class="container">
-<aside class="sidebar">
-  <section>
-    <span class="label">プロフィール画像</span>
-    <h3 class="user-info">
-    <% if @user.image %>
-      <%= image_tag @user.image.url, class: "profile_img" %>
-    <% else %>
-      <%= image_tag "wanko.png", class: "profile_img" %>
-    <% end %>
-    </h3>
-  </section>
-
-  <section>
-    <span class="label">ユーザー</span>
-    <h3 class="user-info"><%= @user.name %></h3>
-  </section>
-
-  <section>
-    <span class="label">メールアドレス</span>
-    <h3 class="user-info"><%= @user.email %></h3>
-  </section>
-
-  <% if current_user?(@user) %>
+  <aside class="sidebar">
     <section>
-      <small><%= link_to 'プロフィールを編集', edit_user_path(@user) %></small>
+      <span class="label">プロフィール画像</span>
+      <h3 class="user-info">
+      <% if @user.image %>
+        <%= image_tag @user.image.url, class: "profile_img" %>
+      <% else %>
+        <%= image_tag "wanko.png", class: "profile_img" %>
+      <% end %>
+      </h3>
     </section>
-  <% end %>
 
-</aside>
+    <section>
+      <span class="label">ユーザー</span>
+      <h3 class="user-info"><%= @user.name %></h3>
+    </section>
 
-<ul class="notes">
-  <h2><%= @title %></h2>
-  <% @events.each do |event| %>
-  <li>  
-    <%= image_tag event.main_image %>
-    <span class="content">
-      <%= link_to event.name, event %>
-    </span>
-    <span>
-      <%= event.date.strftime("%Y-%m-%d %H:%M:%S") %>
-    </span>
-  </li>
-  <% end %>
-</ul>
+    <section>
+      <span class="label">メールアドレス</span>
+      <h3 class="user-info"><%= @user.email %></h3>
+    </section>
+
+    <% if current_user?(@user) %>
+      <section>
+        <small><%= link_to 'プロフィールを編集', edit_user_path(@user) %></small>
+      </section>
+    <% end %>
+
+  </aside>
+
+  <ul class="notes">
+    <h2><%= @title %></h2>
+    <% @events.each do |event| %>
+    <li>  
+      <%= image_tag event.main_image %>
+      <span class="content">
+        <%= link_to event.name, event %>
+      </span>
+      <span>
+        <%= event.date %>
+      </span>
+    </li>
+    <% end %>
+  </ul>
 </div>
