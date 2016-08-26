@@ -1,4 +1,8 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "ikegaya.dev@gmail.com"
+	if Rails.env == 'production'
+		default from: ENV['ENV_MAIL_USER']
+	else
+		default from: "ikegaya.dev@gmail.com"
+	end
   layout 'mailer'
 end

@@ -12,8 +12,11 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'ikegaya.dev@gmail.com'
-
+  if Rails.env == 'production'
+    config.mailer_sender = ENV['ENV_MAIL_USER']
+  else
+    config.mailer_sender = 'ikegaya.dev@gmail.com'
+  end
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -263,8 +266,10 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   if Rails.env == "production"
-    config.omniauth :facebook, "635410779967868", "c1f543d643e237f54c40d5029d780d3b"
+    config.omniauth :facebook, ENV['FACEBOOK_ID'], ENV['FACEBOOK_PASS']
   else
     config.omniauth :facebook, '635413909967555', '8d65de16e5964ff9f746eecc6cb2f6ed'
   end
+
+  config.secret_key = 'acfd4444afbeecf53b7244bcc6fb16be1578af998d907756227007a34efaa2c0adfd8b52fcf6611814a50162fcb30aa9eb30b355663c8366297b685f9fce99f6'
 end
