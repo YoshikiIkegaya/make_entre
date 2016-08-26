@@ -56,7 +56,7 @@
                         <div class="col-lg-6" id="participant">
                             <% @users.each do |user| %>
                                 <% if user.image %>
-                                    <span><%= image_tag "/user_images/#{user.image}", class: "profile_img" %></span>
+                                    <span><%= image_tag user.image.url, class: "profile_img" %></span>
                                     <p class="arrow_box"><%= user.name %></p>
                                 <% else %>
                                     <span><%= image_tag "wanko.png", class: "profile_img" %></span>
