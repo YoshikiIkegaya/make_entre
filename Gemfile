@@ -40,6 +40,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass'
+# 日時フォーマット用の言語ファイル
+gem 'rails-i18n'
 
 # 管理画面に画像保存機能を追加
 gem 'carrierwave',github: 'carrierwaveuploader/carrierwave'
