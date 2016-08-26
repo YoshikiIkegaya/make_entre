@@ -1,8 +1,13 @@
+<div class="container">
 <aside class="sidebar">
   <section>
     <span class="label">プロフィール画像</span>
     <h3 class="user-info">
-      <%= image_tag @user.image.url %>
+    <% if @user.image %>
+      <%= image_tag @user.image.url, class: "profile_img" %>
+    <% else %>
+      <%= image_tag "wanko.png", class: "profile_img" %>
+    <% end %>
     </h3>
   </section>
 
@@ -27,6 +32,15 @@
 <ul class="notes">
   <h2><%= @title %></h2>
   <% @events.each do |event| %>
-    <%= event.name %>
+  <li>  
+    <%= image_tag event.main_image %>
+    <span class="content">
+      <%= link_to event.name, event %>
+    </span>
+    <span>
+      <%= event.date.strftime("%Y-%m-%d %H:%M:%S") %>
+    </span>
+  </li>
   <% end %>
 </ul>
+</div>
