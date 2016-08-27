@@ -43,7 +43,42 @@
 
   <%= yield %>
 
-  <% if !current_page?(events_path) && !current_page?(root_path) %>
+  <% if current_page?(events_path) || current_page?(root_path) %>
+    <footer class="footer-big">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-6">
+              <h5>所在地</h5>
+              <p>東京都港区高輪1-2-16  フラットウェル高輪1F<br>
+                <br>
+                info@makeentre.jp</p>
+                <p>Copyright ©メイクアントレグループ All Rights Reserved.</p>
+            </div>
+            <div class="footer-col col-md-3">
+              <h5>開催日時</h5>
+              <p>
+              日時：毎週月曜日 20-22時<br>
+              アクセス：<br>
+              白金高輪駅２番出口より徒歩2分
+              </p>
+            </div>
+            <div class="footer-col col-md-3">
+              <h5>SNS</h5>
+              <div class="btns">
+              <ul class="footer-share">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <% else %>
     <div class="container">
       <footer class="footer">
         <div class="footer-small">
