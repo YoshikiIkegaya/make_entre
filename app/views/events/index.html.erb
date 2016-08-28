@@ -51,7 +51,7 @@
 
         <div class="col-md-3 col-sm-6 hero-feature">
           <div class="thumbnail">
-            <%= image_tag event.main_image, class: "index_main_img" %>
+            <%= link_to image_tag(event.main_image), event, class: "index_main_img" %>
             <div class="caption">
               <h3><%= event.name %></h3>
               <p><%= event.place %><br>

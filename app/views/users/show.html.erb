@@ -33,12 +33,12 @@
     <h2><%= @title %></h2>
     <% @events.each do |event| %>
     <li>  
-      <%= image_tag event.main_image %>
+      <%= link_to image_tag(event.main_image), event %>
       <span class="content">
         <%= link_to event.name, event %>
       </span>
       <span>
-        <%= event.date %>
+        <h4><%= event.date %></h4>
       </span>
     </li>
     <% end %>

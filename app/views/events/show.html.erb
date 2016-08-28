@@ -10,17 +10,17 @@
                     <!-- Blog Post -->
 
                     <!-- Title -->
-                    <h1><%= @event.date %>　<%= @event.name %></h1>
+                    <h1><%= @event.name %>　開催日：<%= @event.date %></h1>
 
                     <!-- Author -->
                     <p class="lead">
-                        by 主催者：<%= link_to @event.organizer, @event.organizer_url if @event.organizer %>
+                        主催：<%= link_to @event.organizer, @event.organizer_url if @event.organizer %>
                     </p>
 
                     <hr>
 
                     <!-- Date/Time -->
-                    <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                    <p><span class="glyphicon glyphicon-time"></span> <%= @event.updated_at %> 作成</p>
 
                     <hr>
 

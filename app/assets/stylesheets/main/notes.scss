@@ -23,13 +23,17 @@
   padding-top: 8px;
 }
 
+.notes .content {
+  font-size: 20px;
+}
+
 .notes img {
   display: inline-block;
   margin-right: 6%;
   margin-bottom: 6%;
   float: left;
-  width:320px;
-  height:200px;
+  width:240px;
+  height:150px;
 }
 
 .show-note li {
